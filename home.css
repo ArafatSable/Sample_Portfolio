@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    /* Applying Roboto font to all elements */
+}
+
+:root {
+    --primary-text: #000000;
+    /* Color1 - Primary text color */
+    --accent-color: #F72798;
+    /* Color2 - Accent color */
+    --secondary-text: #F57D1F;
+    /* Color3 - Secondary text color */
+    --background: #EBF400;
+    /* Color4 - Background color */
+    --transition-duration: 0.3s;
+    /* Common transition duration */
+}
+
+/* Start of navbar edit */
+/* make navbar fixed when scrolled it should come down */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--background) !important;
+    backdrop-filter: blur(6px) saturate(149%);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px -3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    transition: all ease var(--transition-duration);
+}
+
+
+.nav-link {
+    text-decoration: none;
+    position: relative;
+    color: var(--primary-text);
+    transition: color var(--transition-duration) ease;
+    font-size: large;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+    transition: width var(--transition-duration) ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+    font-weight: 400;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+
+}
+
+/* end of navbar edit */
+/* start of video container edit */
+#video-container {
+    position: relative;
+    opacity: 0.95;
+}
+
+#myVideo {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+
+#content-section {
+    position: relative;
+    padding: 20px;
+    /* Adjust the padding as needed */
+    background-color: #fff;
+    /* Add a background color to make it stand out, optional */
+}
+
+#skipButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #EBF400;
+    /* Use the background color from your palette */
+    color: #000000;
+    /* Use the text color from your palette */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* end of video container edit */
+
+
+/* start of media querys */
+
+
+/* end of media querys */
+#content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 100px;
+    color: #fff;
+}
+
+/* i want all card of fized size means if someone is big then all will be of that size */
